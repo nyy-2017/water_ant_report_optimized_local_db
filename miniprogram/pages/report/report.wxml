@@ -1,0 +1,93 @@
+<view class="page">
+  <!-- 虫害类型 -->
+  <view class="card">
+    <view class="field-label">虫害类型 <text class="req">*</text></view>
+    <view class="chips">
+      <view
+        wx:for="{{typeOptions}}"
+        wx:key="*this"
+        class="chip {{f.pest === item ? 'chip-on' : ''}}"
+        data-v="{{item}}"
+        bindtap="pickType"
+      >{{item}}</view>
+    </view>
+  </view>
+
+  <!-- 危害程度 -->
+  <view class="card">
+    <view class="field-label">危害程度 <text class="req">*</text></view>
+    <view class="chips">
+      <view
+        wx:for="{{levelOptions}}"
+        wx:key="*this"
+        class="chip {{f.level === item ? 'chip-on' : ''}}"
+        data-v="{{item}}"
+        bindtap="pickLevel"
+      >{{item}}</view>
+    </view>
+  </view>
+
+  <!-- 情况（可多选） -->
+  <view class="card">
+    <view class="field-label">情况(可多选)</view>
+    <view class="chips">
+      <view
+        wx:for="{{situationOptions}}"
+        wx:key="*this"
+        class="chip {{sel.situation[item] ? 'chip-on' : ''}}"
+        data-v="{{item}}"
+        bindtap="toggleSituation"
+      >{{item}}</view>
+    </view>
+  </view>
+
+  <!-- 出现位置（可多选） -->
+  <view class="card">
+    <view class="field-label">出现位置(可多选)</view>
+    <view class="chips">
+      <view
+        wx:for="{{placeOptions}}"
+        wx:key="*this"
+        class="chip {{sel.place[item] ? 'chip-on' : ''}}"
+        data-v="{{item}}"
+        bindtap="togglePlace"
+      >{{item}}</view>
+    </view>
+  </view>
+
+  <!-- 房屋面积 -->
+  <view class="card">
+    <view class="field-label">房屋面积(m²)</view>
+    <input class="inner-input" type="digit" placeholder="选填" placeholder-class="ph" value="{{f.area}}" data-k="area" bindinput="input"/>
+  </view>
+
+  <!-- 补充说明 -->
+  <view class="card">
+    <view class="field-label">补充说明</view>
+    <textarea class="inner-textarea" placeholder="描述虫害具体情况(选填)" placeholder-class="ph" value="{{f.note}}" data-k="note" bindinput="input"/>
+  </view>
+
+  <!-- 现场照片 -->
+  <view class="card">
+    <view class="field-label">现场照片 <text class="req">*</text>(最多 5 张)</view>
+    <view class="photo-grid">
+      <view class="photo-item" wx:for="{{f.photos}}" wx:key="url">
+        <image src="{{item.url}}" mode="aspectFill" class="photo-img" data-i="{{index}}" bindtap="removePhoto"/>
+        <view class="photo-del" data-i="{{index}}" catchtap="removePhoto">×</view>
+      </view>
+      <view class="photo-add" wx:if="{{f.photos.length < 5}}" bindtap="photos">＋</view>
+    </view>
+  </view>
+
+  <!-- 上门位置 -->
+  <view class="card">
+    <view class="field-label">上门位置 <text class="req">*</text></view>
+    <view class="loc-row">
+      <view class="loc-btn" bindtap="locate">地图选点</view>
+      <text class="loc-hint">{{f.address || '点按钮在地图上选位置'}}</text>
+    </view>
+    <textarea class="inner-textarea" placeholder="补充门牌号等(可微调)" placeholder-class="ph" value="{{f.addressDetail}}" data-k="addressDetail" bindinput="input"/>
+  </view>
+
+  <button class="submit-btn" loading="{{busy}}" bindtap="submit">提交上报</button>
+</view>

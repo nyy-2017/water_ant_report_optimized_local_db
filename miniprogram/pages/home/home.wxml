@@ -1,0 +1,57 @@
+<view class="page">
+  <view class="hero">
+    <view class="hero-water">水</view>
+    <view class="hero-eyebrow">水利设施巡查 · 隐患管理</view>
+    <view class="hero-title">白蚁隐患上报</view>
+    <view class="hero-sub">发现隐患，及时上报，闭环处置</view>
+  </view>
+
+  <block wx:if="{{logged}}">
+    <view class="stats">
+      <view class="stat-card" data-key="pending" bindtap="goStats" hover-class="pressed">
+        <view class="stat-num">{{stats.pending}}</view>
+        <view class="stat-label">待处理</view>
+      </view>
+      <view class="stat-card" data-key="doing" bindtap="goStats" hover-class="pressed">
+        <view class="stat-num">{{stats.doing}}</view>
+        <view class="stat-label">处理中</view>
+      </view>
+      <view class="stat-card" data-key="done" bindtap="goStats" hover-class="pressed">
+        <view class="stat-num">{{stats.done}}</view>
+        <view class="stat-label">已完成</view>
+      </view>
+    </view>
+
+    <view class="section-title">快捷操作</view>
+
+    <view class="action" bindtap="report" hover-class="pressed">
+      <view class="action-icon icon-green">＋</view>
+      <view class="action-body">
+        <view class="action-title">新增隐患上报</view>
+        <view class="action-sub">填写位置、危害情况及现场信息</view>
+      </view>
+      <view class="chevron">›</view>
+    </view>
+
+    <view class="action" bindtap="records" hover-class="pressed">
+      <view class="action-icon icon-blue">≡</view>
+      <view class="action-body">
+        <view class="action-title">我的上报记录</view>
+        <view class="action-sub">查看进度与处理状态</view>
+      </view>
+      <view class="chevron">›</view>
+    </view>
+  </block>
+
+  <view wx:else class="login-hint">
+    <view class="login-hint-text">登录后可上报隐患、跟踪处理进度</view>
+    <button class="login-btn" bindtap="goLogin">立即登录</button>
+  </view>
+
+  <view class="tip">
+    <view class="tip-title">上报提示</view>
+    <view class="tip-text">请尽量填写准确位置，并描述白蚁活动迹象、受影响设施及发现时间。如有现场照片，可在正式版本中一并上传。</view>
+  </view>
+
+  <view class="footer">水利设施安全管理 · 白蚁隐患模块</view>
+</view>

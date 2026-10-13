@@ -1,0 +1,154 @@
+/* 状态条 */
+.status-banner {
+  background: #1B2A41;
+  border: 1rpx solid #24334B;
+  border-radius: 18rpx;
+  padding: 28rpx 0;
+  margin-bottom: 22rpx;
+  text-align: center;
+  font-size: 34rpx;
+  font-weight: 600;
+  color: #C3D0E2;
+  letter-spacing: 2rpx;
+}
+
+/* 处理进度时间轴 */
+.timeline {
+  padding-left: 46rpx;
+}
+
+.tl-item {
+  position: relative;
+  padding-bottom: 24rpx;
+}
+
+.tl-item:last-child {
+  padding-bottom: 0;
+}
+
+.tl-line {
+  position: absolute;
+  left: -32rpx;
+  top: 40rpx;
+  bottom: -8rpx;
+  width: 2rpx;
+  background: #2A3B56;
+}
+
+.tl-dot {
+  position: absolute;
+  left: -46rpx;
+  top: 4rpx;
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+  background: #2A3B56;
+  color: transparent;
+  font-size: 20rpx;
+  font-weight: 700;
+  line-height: 30rpx;
+  text-align: center;
+}
+
+.tl-dot-active {
+  background: #2F80ED;
+  color: #FFFFFF;
+}
+
+.tl-action {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #E8EEF8;
+  line-height: 1.5;
+}
+
+.tl-time {
+  margin-top: 6rpx;
+  font-size: 26rpx;
+  color: #8C9AB2;
+}
+
+.tl-note {
+  margin-top: 6rpx;
+  font-size: 26rpx;
+  color: #B9C6D9;
+  line-height: 1.5;
+}
+
+/* 上报信息 */
+.info-row {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 26rpx;
+}
+
+.info-row:last-child {
+  margin-bottom: 0;
+}
+
+.info-label {
+  width: 160rpx;
+  flex-shrink: 0;
+  font-size: 28rpx;
+  color: #9AA9BF;
+  line-height: 1.6;
+}
+
+.info-value {
+  flex: 1;
+  font-size: 28rpx;
+  color: #E8EEF8;
+  line-height: 1.6;
+  word-break: break-all;
+}
+
+.info-row-link .info-value {
+  color: #7FC4FF;
+}
+
+.info-row-hover {
+  opacity: 0.7;
+}
+
+/* 现场照片 */
+.photos {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -8rpx;
+}
+
+.photo {
+  width: 200rpx;
+  height: 200rpx;
+  margin: 8rpx;
+  border-radius: 12rpx;
+  background: #0D1728;
+}
+
+/* 处理结果 */
+.result-text {
+  font-size: 28rpx;
+  line-height: 1.6;
+  color: #E8EEF8;
+}
+
+/* 取消订单 */
+.cancel-wrap {
+  padding: 6rpx 0 24rpx;
+}
+
+.cancel-btn {
+  height: 92rpx;
+  line-height: 92rpx;
+  text-align: center;
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #F2545B;
+  background: #16233A;
+  border: 1rpx solid #2A3B56;
+  border-radius: 16rpx;
+}
+
+.cancel-btn-hover {
+  opacity: 0.75;
+}

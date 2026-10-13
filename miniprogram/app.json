@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/profile/profile",
+    "pages/login/login",
+    "pages/report/report",
+    "pages/records/records",
+    "pages/detail/detail"
+  ],
+  "window": {
+    "navigationBarTitleText": "白蚁隐患上报",
+    "navigationBarBackgroundColor": "#101B2D",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#0B1220"
+  },
+  "tabBar": {
+    "color": "#8C9AB2",
+    "selectedColor": "#20C7A5",
+    "backgroundColor": "#101B2D",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "用于记录白蚁隐患现场位置"
+    }
+  },
+  "requiredPrivateInfos": [
+    "chooseLocation"
+  ],
+  "style": "v2"
+}

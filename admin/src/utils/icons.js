@@ -1,0 +1,121 @@
+/**
+ * 图标集中登记：只引入实际使用的图标，避免把整个图标库打进产物。
+ * 注册后即可通过全局组件名使用，菜单表里的 icon 字段存的就是这里的键名。
+ */
+import {
+  AlertOutlined,
+  ApartmentOutlined,
+  AppstoreAddOutlined,
+  AppstoreOutlined,
+  AreaChartOutlined,
+  BarChartOutlined,
+  BarsOutlined,
+  BellOutlined,
+  BugOutlined,
+  BulbOutlined,
+  CheckCircleOutlined,
+  ClockCircleOutlined,
+  ClusterOutlined,
+  DashboardOutlined,
+  DatabaseOutlined,
+  DeleteOutlined,
+  DesktopOutlined,
+  DownloadOutlined,
+  EnvironmentOutlined,
+  ExperimentOutlined,
+  FileProtectOutlined,
+  FileSearchOutlined,
+  FileTextOutlined,
+  FolderOutlined,
+  HomeOutlined,
+  IdcardOutlined,
+  KeyOutlined,
+  LineChartOutlined,
+  LineOutlined,
+  LockOutlined,
+  LogoutOutlined,
+  MenuFoldOutlined,
+  MenuOutlined,
+  MenuUnfoldOutlined,
+  MobileOutlined,
+  NotificationOutlined,
+  PieChartOutlined,
+  PlusOutlined,
+  ProfileOutlined,
+  QuestionCircleOutlined,
+  ReloadOutlined,
+  SafetyCertificateOutlined,
+  SearchOutlined,
+  SettingOutlined,
+  SolutionOutlined,
+  SyncOutlined,
+  TeamOutlined,
+  ThunderboltOutlined,
+  ToolOutlined,
+  UserOutlined
+} from '@ant-design/icons-vue'
+
+export const ICON_TABLE = {
+  AlertOutlined,
+  ApartmentOutlined,
+  AppstoreAddOutlined,
+  AppstoreOutlined,
+  AreaChartOutlined,
+  BarChartOutlined,
+  BarsOutlined,
+  BellOutlined,
+  BugOutlined,
+  BulbOutlined,
+  CheckCircleOutlined,
+  ClockCircleOutlined,
+  ClusterOutlined,
+  DashboardOutlined,
+  DatabaseOutlined,
+  DeleteOutlined,
+  DesktopOutlined,
+  DownloadOutlined,
+  EnvironmentOutlined,
+  ExperimentOutlined,
+  FileProtectOutlined,
+  FileSearchOutlined,
+  FileTextOutlined,
+  FolderOutlined,
+  HomeOutlined,
+  IdcardOutlined,
+  KeyOutlined,
+  LineChartOutlined,
+  LineOutlined,
+  LockOutlined,
+  LogoutOutlined,
+  MenuFoldOutlined,
+  MenuOutlined,
+  MenuUnfoldOutlined,
+  MobileOutlined,
+  NotificationOutlined,
+  PieChartOutlined,
+  PlusOutlined,
+  ProfileOutlined,
+  QuestionCircleOutlined,
+  ReloadOutlined,
+  SafetyCertificateOutlined,
+  SearchOutlined,
+  SettingOutlined,
+  SolutionOutlined,
+  SyncOutlined,
+  TeamOutlined,
+  ThunderboltOutlined,
+  ToolOutlined,
+  UserOutlined
+}
+
+/** 菜单表单下拉可选的图标名 */
+export const ICON_OPTIONS = Object.keys(ICON_TABLE)
+
+export function setupIcons(app) {
+  for (const [name, component] of Object.entries(ICON_TABLE)) app.component(name, component)
+}
+
+/** 按后端存储的图标名取组件，找不到时回退到通用菜单图标 */
+export function getIcon(name) {
+  return (name && ICON_TABLE[name]) || ICON_TABLE.MenuOutlined
+}

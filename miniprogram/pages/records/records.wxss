@@ -1,0 +1,148 @@
+.page {
+  padding: 30rpx 28rpx 60rpx
+}
+
+/* 头部 */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 26rpx
+}
+
+.header-title {
+  font-size: 38rpx;
+  font-weight: 700
+}
+
+.header-sub {
+  color: #8C9AB2;
+  font-size: 25rpx;
+  margin-top: 10rpx
+}
+
+.new-btn {
+  background: #1E7A66;
+  color: #C9F7EC;
+  font-size: 26rpx;
+  font-weight: 600;
+  padding: 16rpx 28rpx;
+  border-radius: 12rpx
+}
+
+/* 筛选标签 */
+.filters {
+  display: flex;
+  gap: 18rpx;
+  flex-wrap: wrap;
+  margin-bottom: 30rpx
+}
+
+.chip {
+  background: #1A2942;
+  color: #8C9AB2;
+  border: 1rpx solid #263752;
+  border-radius: 999rpx;
+  padding: 12rpx 30rpx;
+  font-size: 25rpx
+}
+
+.chip-active {
+  background: #20C7A5;
+  border-color: #20C7A5;
+  color: #06251F;
+  font-weight: 700
+}
+
+/* 记录卡片 */
+.card {
+  background: #131F33;
+  border: 1rpx solid #24334B;
+  border-radius: 20rpx;
+  padding: 28rpx;
+  margin-bottom: 22rpx
+}
+
+.pressed {
+  background: #182740
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
+
+.code {
+  color: #8C9AB2;
+  font-size: 24rpx
+}
+
+.status {
+  color: #5BE0C1;
+  font-size: 25rpx
+}
+
+.location {
+  font-size: 32rpx;
+  font-weight: 600;
+  margin: 18rpx 0
+}
+
+.meta {
+  color: #8C9AB2;
+  font-size: 24rpx
+}
+
+.desc {
+  margin-top: 14rpx;
+  font-size: 27rpx;
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden
+}
+
+.photos {
+  color: #8C9AB2;
+  font-size: 24rpx;
+  margin-top: 12rpx
+}
+
+/* 空状态 */
+.empty {
+  background: #101C30;
+  border: 1rpx solid #1E3049;
+  border-radius: 22rpx;
+  padding: 90rpx 40rpx;
+  text-align: center
+}
+
+.empty-icon {
+  font-size: 80rpx;
+  color: #55677F;
+  margin-bottom: 26rpx
+}
+
+.empty-title {
+  font-size: 34rpx;
+  font-weight: 700;
+  margin-bottom: 16rpx
+}
+
+.empty-sub {
+  color: #8C9AB2;
+  font-size: 26rpx;
+  margin-bottom: 44rpx
+}
+
+.empty-btn {
+  display: inline-block;
+  background: #20C7A5;
+  color: #06251F;
+  font-size: 29rpx;
+  font-weight: 700;
+  padding: 22rpx 90rpx;
+  border-radius: 14rpx
+}

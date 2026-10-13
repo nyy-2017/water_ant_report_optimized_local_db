@@ -1,0 +1,71 @@
+:root {
+  --wa-bg: #0b1220;
+  --wa-sider: #0e1729;
+  --wa-panel: #122032;
+  --wa-border: #22334d;
+  --wa-primary: #20c7a5;
+  --wa-text: #e8eef8;
+  --wa-muted: #8c9ab2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #25395a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #33507d;
+}
+
+/* ---------- 通用业务样式 ---------- */
+.page-title {
+  margin: 0 0 2px;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--wa-text);
+}
+
+.page-desc {
+  margin: 0;
+  color: var(--wa-muted);
+  font-size: 13px;
+}
+
+.panel {
+  background: var(--wa-panel);
+  border: 1px solid var(--wa-border);
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.table-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.table-toolbar .spacer {
+  flex: 1;
+}

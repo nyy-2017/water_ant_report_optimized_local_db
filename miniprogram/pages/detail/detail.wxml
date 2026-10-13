@@ -1,0 +1,82 @@
+<view class="page" wx:if="{{r}}">
+  <view class="status-banner">{{r.status}}</view>
+
+  <view class="card" wx:if="{{r.events.length}}">
+    <view class="section-title">处理进度</view>
+    <view class="timeline">
+      <view class="tl-item" wx:for="{{r.events}}" wx:key="index">
+        <view class="tl-line" wx:if="{{index !== r.events.length - 1}}"></view>
+        <view class="tl-dot {{index === 0 ? 'tl-dot-active' : ''}}">{{index === 0 ? '✓' : ''}}</view>
+        <view class="tl-body">
+          <view class="tl-action">{{item.action}}</view>
+          <view class="tl-time">{{item.created_at}}</view>
+          <view class="tl-note" wx:if="{{item.note}}">{{item.note}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="card">
+    <view class="section-title">上报信息</view>
+    <view class="info-row">
+      <view class="info-label">虫害类型</view>
+      <view class="info-value">{{r.type}}</view>
+    </view>
+    <view class="info-row" wx:if="{{r.level}}">
+      <view class="info-label">危害程度</view>
+      <view class="info-value">{{r.level}}</view>
+    </view>
+    <view class="info-row" wx:if="{{r.area}}">
+      <view class="info-label">房屋面积</view>
+      <view class="info-value">{{r.area}}</view>
+    </view>
+    <view class="info-row" wx:if="{{r.situations}}">
+      <view class="info-label">情况</view>
+      <view class="info-value">{{r.situations}}</view>
+    </view>
+    <view class="info-row" wx:if="{{r.places}}">
+      <view class="info-label">出现位置</view>
+      <view class="info-value">{{r.places}}</view>
+    </view>
+    <view class="info-row" wx:if="{{r.note}}">
+      <view class="info-label">说明</view>
+      <view class="info-value">{{r.note}}</view>
+    </view>
+    <view class="info-row">
+      <view class="info-label">上报时间</view>
+      <view class="info-value">{{r.created_at}}</view>
+    </view>
+    <view class="info-row info-row-link" bindtap="map" hover-class="info-row-hover">
+      <view class="info-label">地址</view>
+      <view class="info-value">{{r.address}}</view>
+    </view>
+    <view class="info-row">
+      <view class="info-label">工单编号</view>
+      <view class="info-value muted">{{r.code}}</view>
+    </view>
+  </view>
+
+  <view class="card" wx:if="{{r.photos.length}}">
+    <view class="section-title">现场照片</view>
+    <view class="photos">
+      <image
+        wx:for="{{r.photos}}"
+        wx:key="*this"
+        class="photo"
+        src="{{item}}"
+        mode="aspectFill"
+        data-src="{{item}}"
+        bindtap="preview"
+      />
+    </view>
+  </view>
+
+  <view class="card" wx:if="{{r.result}}">
+    <view class="section-title">处理结果</view>
+    <view class="result-text">{{r.result}}</view>
+  </view>
+
+  <view class="cancel-wrap" wx:if="{{canCancel}}">
+    <view class="cancel-btn" bindtap="cancel" hover-class="cancel-btn-hover">取消订单</view>
+  </view>
+</view>

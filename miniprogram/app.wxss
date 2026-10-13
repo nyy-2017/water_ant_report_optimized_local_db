@@ -1,0 +1,77 @@
+page {
+  background: #0B1220;
+  color: #E8EEF8;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif
+}
+
+.page {
+  padding: 32rpx
+}
+
+.card {
+  background: #131F33;
+  border: 1rpx solid #24334B;
+  border-radius: 22rpx;
+  padding: 26rpx;
+  margin-bottom: 22rpx
+}
+
+.section-title {
+  font-size: 34rpx;
+  font-weight: 700;
+  margin-bottom: 20rpx
+}
+
+.muted {
+  color: #8C9AB2
+}
+
+.field {
+  margin-bottom: 24rpx
+}
+.field-input {
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.field-label {
+  color: #B9C6D9
+}
+
+.primary-btn {
+  background: #20C7A5;
+  color: #071A1A;
+  border-radius: 14rpx;
+  font-weight: 700
+}
+
+.primary-btn:after {
+  border: 0
+}
+
+input,
+textarea {
+  box-sizing: border-box;
+  width: 100%;
+  background: #0D1728;
+  border: 1rpx solid #2A3B56;
+  border-radius: 12rpx;
+  padding: 20rpx;
+  color: #E8EEF8;
+  margin-top: 10rpx
+}
+
+textarea {
+  min-height: 170rpx
+}
+
+/* 输入框占位文字（全站统一） */
+.ph {
+  color: #7E90AA
+}
+
+.secondary-btn {
+  background: #1C2B42;
+  color: #DDE7F7;
+  border: 1rpx solid #30435F;
+  border-radius: 12rpx
+}

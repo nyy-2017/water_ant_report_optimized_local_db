@@ -1,0 +1,71 @@
+.page {
+  padding: 60rpx 40rpx
+}
+
+.brand {
+  text-align: center;
+  margin: 80rpx 0 60rpx
+}
+
+.brand-title {
+  font-size: 52rpx;
+  font-weight: 700;
+  margin-bottom: 16rpx
+}
+
+.brand-sub {
+  color: #8C9AB2;
+  font-size: 26rpx
+}
+
+.card {
+  background: #131F33;
+  border: 1rpx solid #24334B;
+  border-radius: 22rpx;
+  padding: 34rpx 30rpx;
+  margin-bottom: 46rpx
+}
+
+.field {
+  margin-bottom: 28rpx
+}
+
+.field:last-child {
+  margin-bottom: 0
+}
+
+.field-label {
+  color: #B9C6D9;
+  font-size: 26rpx;
+  margin-bottom: 6rpx
+}
+
+/* 输入框：去边框，仅保留下划线 */
+.field-input {
+  background: transparent;
+  border: 0;
+  border-bottom: 1rpx solid #2A3B56;
+  border-radius: 0;
+  padding: 16rpx 0;
+  margin-top: 6rpx
+}
+
+.submit-btn {
+  background: linear-gradient(90deg, #2BB3FF, #20C7A5);
+  color: #06202B;
+  font-size: 32rpx;
+  font-weight: 700;
+  border-radius: 16rpx;
+  line-height: 92rpx
+}
+
+.submit-btn:after {
+  border: 0
+}
+
+.foot-note {
+  text-align: center;
+  color: #55677F;
+  font-size: 24rpx;
+  margin-top: 34rpx
+}

@@ -1,0 +1,33 @@
+backend/
+├─ server.js                      入口：仅加载 app 并 listen
+└─ src/
+   ├─ config.js                   环境变量、端口、密钥校验、上传/DB 路径
+   ├─ app.js                      express 实例 + helmet/cors/json/static/限流 + 错误兜底
+   ├─ routes.js                   总路由聚合
+   ├─ db/
+   │  ├─ index.js                 连接、pragma、依次执行 schema/seed
+   │  ├─ schema.js                initCoreSchema(users/reports/events + 迁移)
+   │  │                           initSystemSchema(roles/menus/role_menus/sys_logs + users_v2 升级)
+   │  └─ seed.js                  内置角色、菜单、角色默认授权种子
+   ├─ utils/
+   │  ├─ ua.js                    parseUA（浏览器/系统/IP）
+   │  └─ tree.js                  buildTree / permList
+   ├─ services/
+   │  ├─ log.service.js           writeLog 操作日志
+   │  └─ report.service.js        shape / addEvent / listEvents
+   ├─ middleware/
+   │  ├─ auth.js                  auth、requireRole
+   │  ├─ upload.js                multer 存储与图片过滤
+   │  └─ error.js                 统一错误处理
+   └─ modules/
+      ├─ auth.routes.js           health/login/me/profile/logout/menus
+      ├─ upload.routes.js         /api/uploads
+      ├─ report.routes.js         /api/reports（mine、详情、取消、提交）
+      └─ admin/
+         ├─ index.js
+         ├─ users.routes.js       用户 CRUD、启停、重置密码
+         ├─ roles.routes.js       角色 CRUD、分配菜单
+         ├─ menus.routes.js       菜单 CRUD
+         ├─ logs.routes.js        日志分页/枚举/清理
+         ├─ reports.routes.js     工单列表、审核、派单、完成
+         └─ dashboard.routes.js   首页看板

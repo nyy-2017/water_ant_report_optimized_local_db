@@ -1,0 +1,1 @@
+const o=["待审核","待派单","已派单","处理中","已完成","已驳回","已取消"],s={待审核:"orange",待派单:"gold",已派单:"blue",处理中:"cyan",已完成:"green",已驳回:"red",已取消:"default"},c=a=>s[a]||"default",t={待审核:"#faad14",待派单:"#f6bd16",已派单:"#3b9dff",处理中:"#178cba",已完成:"#20c7a5",已驳回:"#ff7875",已取消:"#7a879b"},e=a=>t[a]||"#8c9ab2";export{o as R,e as a,c as s};
